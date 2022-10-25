@@ -12,13 +12,13 @@ body {
   padding: 20px;
   position: relative;
 }
-.top-suit {
+.topsuit {
   position: absolute;
   top: 5%;
   left: 10%;
   font-size: 50px;
 }
-.bottom-suit {
+.bottomsuit {
   position: absolute;
   bottom: 5%;
   right: 10%;
@@ -30,18 +30,4 @@ body {
   top: 50%;
   left: 45%;
   font-size: 40px;
-}
-.suit {
-  .hearts {
-    content: ♥;
-  }
-  .diamonds {
-    content: ♦;
-  }
-  .spades {
-    content: ♠;
-  }
-  .clubs {
-    content: ♣;
-  }
 }

@@ -7,7 +7,9 @@ import "./assets/img/4geeks.ico";
 
 window.onload = () => {
   document.querySelector(".card").classList.add("generateRandomSuit");
-  document.querySelector(".card").innerHTML = generateRandomNumber();
+  document.querySelector(".number").innerHTML = generateRandomNumber();
+  document.querySelector(".topsuit").innerHTML = generateRandomSuit();
+  document.querySelector(".bottomsuit").innerHTML = generateRandomSuit2();
 };
 
 let generateRandomNumber = () => {
@@ -17,12 +19,18 @@ let generateRandomNumber = () => {
 };
 
 let generateRandomSuit = () => {
-  let topSuit = ["hearts", "diamonds", "spades", "clubs"];
-  let indexSuit = Math.floor(Math.random() * topSuit.length);
-  return suit[indexSuit];
+  let topSuit = ["♦", "♥", "♠", "♣"];
+  let indexSuit = topSuit[Math.floor(Math.random() * topSuit.length)];
+  if (indexSuit === topSuit[1] || indexSuit === topSuit[3]) {
+    document.getElementsByClassName("topsuit")[0].style.color = "red";
+  }
+  return indexSuit;
 };
 let generateRandomSuit2 = () => {
-  let bottomSuit = ["hearts", "diamonds", "spades", "clubs"];
-  let indexSuit = Math.floor(Math.random() * bottomSuit.length);
-  return suit[indexSuit];
+  let bottomSuit = ["♦", "♥", "♠", "♣"];
+  let indexSuit = bottomSuit[Math.floor(Math.random() * bottomSuit.length)];
+  if (indexSuit === bottomSuit[1] || indexSuit === bottomSuit[3]) {
+    document.getElementsByClassName("bottomsuit")[0].style.color = "red";
+  }
+  return indexSuit;
 };
